@@ -10,8 +10,8 @@
   } @else {
     <ul class="personnage-list">
       @for (p of personnages; track p.id) {
-        <li class="personnage-card">
-          <a [routerLink]="['/perso', p.id]" class="personnage-name">{{ p.nom }}</a>
+        <li [routerLink]="['/perso', p.id]" class="personnage-card">
+          <a class="personnage-name">{{ p.nom }}</a>
           <span class="personnage-race">{{ p.race }}</span>
           <div class="personnage-stats">
             <span>INT {{ p.stats.INT }}</span>
