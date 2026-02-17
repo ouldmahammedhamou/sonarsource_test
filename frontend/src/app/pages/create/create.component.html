@@ -1,0 +1,77 @@
+<div class="create-page">
+  <h2 class="page-title">Nouveau personnage</h2>
+
+  @if (formErrors.length) {
+    <ul class="form-errors">
+      @for (msg of formErrors; track msg) {
+        <li>{{ msg }}</li>
+      }
+    </ul>
+  }
+
+  @if (error) {
+    <p class="message error">{{ error }}</p>
+  }
+
+  <form (ngSubmit)="onSubmit()" class="create-form">
+    <div class="field">
+      <label for="nom">Nom</label>
+      <input id="nom" type="text" [(ngModel)]="nom" name="nom" required placeholder="Ex: Aragorn" />
+    </div>
+
+    <div class="field">
+      <label for="race">Race</label>
+      <input id="race" type="text" [(ngModel)]="race" name="race" required placeholder="Ex: Humain" />
+    </div>
+
+    <div class="stats-group">
+      <h3>Stats (6, 8, 10 ou 12)</h3>
+      <div class="stats-row">
+        <div class="field stat">
+          <label for="statInt">INT</label>
+          <select id="statInt" [(ngModel)]="statInt" name="statInt">
+            @for (v of statValues; track v) {
+              <option [ngValue]="v">{{ v }}</option>
+            }
+          </select>
+        </div>
+        <div class="field stat">
+          <label for="statStr">STR</label>
+          <select id="statStr" [(ngModel)]="statStr" name="statStr">
+            @for (v of statValues; track v) {
+              <option [ngValue]="v">{{ v }}</option>
+            }
+          </select>
+        </div>
+        <div class="field stat">
+          <label for="statDex">DEX</label>
+          <select id="statDex" [(ngModel)]="statDex" name="statDex">
+            @for (v of statValues; track v) {
+              <option [ngValue]="v">{{ v }}</option>
+            }
+          </select>
+        </div>
+        <div class="field stat">
+          <label for="statWill">WILL</label>
+          <select id="statWill" [(ngModel)]="statWill" name="statWill">
+            @for (v of statValues; track v) {
+              <option [ngValue]="v">{{ v }}</option>
+            }
+          </select>
+        </div>
+      </div>
+    </div>
+
+    <div class="field">
+      <label for="background">Background</label>
+      <textarea id="background" [(ngModel)]="background" name="background" rows="5" placeholder="Histoire du personnage…"></textarea>
+    </div>
+
+    <div class="form-actions">
+      <button type="submit" [disabled]="loading" class="btn btn-primary">
+        {{ loading ? 'Création…' : 'Créer le personnage' }}
+      </button>
+      <a routerLink="/list" class="btn btn-secondary">Annuler</a>
+    </div>
+  </form>
+</div>

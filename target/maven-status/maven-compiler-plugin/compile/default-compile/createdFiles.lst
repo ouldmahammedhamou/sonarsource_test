@@ -1,0 +1,10 @@
+com\sonarsource\personnage\repository\PersonnageRepository.class
+com\sonarsource\personnage\dto\PersonnageCreateDto.class
+com\sonarsource\personnage\PersonnageWikiApplication.class
+com\sonarsource\personnage\entity\Personnage.class
+com\sonarsource\personnage\config\WebConfig.class
+com\sonarsource\personnage\controller\PersonnageController.class
+com\sonarsource\personnage\service\impl\PersonnageServiceImpl.class
+com\sonarsource\personnage\service\PersonnageService.class
+com\sonarsource\personnage\dto\PersonnageResponseDto.class
+com\sonarsource\personnage\dto\StatsDto.class

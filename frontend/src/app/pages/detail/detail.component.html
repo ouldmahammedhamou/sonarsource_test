@@ -1,0 +1,46 @@
+<div class="detail-page">
+  @if (loading) {
+    <p class="message">Chargement…</p>
+  } @else if (error || !personnage) {
+    <p class="message error">{{ error || 'Personnage introuvable.' }}</p>
+    <a routerLink="/list" class="back-link">← Retour à la liste</a>
+  } @else {
+    <a routerLink="/list" class="back-link">← Retour à la liste</a>
+
+    <article class="personnage-detail">
+      <header class="detail-header">
+        <h1 class="detail-name">{{ personnage.nom }}</h1>
+        <span class="detail-race">{{ personnage.race }}</span>
+      </header>
+
+      <section class="detail-stats">
+        <h3>Stats</h3>
+        <div class="stats-grid">
+          <div class="stat-item">
+            <span class="stat-label">INT</span>
+            <span class="stat-value">{{ personnage.stats.INT }}</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">STR</span>
+            <span class="stat-value">{{ personnage.stats.STR }}</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">DEX</span>
+            <span class="stat-value">{{ personnage.stats.DEX }}</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-label">WILL</span>
+            <span class="stat-value">{{ personnage.stats.WILL }}</span>
+          </div>
+        </div>
+      </section>
+
+      @if (personnage.background) {
+        <section class="detail-background">
+          <h3>Background</h3>
+          <p class="background-text">{{ personnage.background }}</p>
+        </section>
+      }
+    </article>
+  }
+</div>

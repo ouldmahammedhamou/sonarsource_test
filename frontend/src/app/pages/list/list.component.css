@@ -1,0 +1,72 @@
+.list-page {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.page-title {
+  font-family: var(--font-title);
+  font-size: 1.75rem;
+  color: var(--accent);
+  margin: 0 0 1.5rem 0;
+}
+
+.message {
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.message.error {
+  color: var(--error);
+  font-style: normal;
+}
+
+.personnage-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 1rem;
+}
+
+.personnage-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem;
+}
+
+.personnage-name {
+  font-family: var(--font-title);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+}
+
+.personnage-name:hover {
+  color: var(--accent-hover);
+  text-decoration: underline;
+}
+
+.personnage-race {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.personnage-stats {
+  display: flex;
+  gap: 1rem;
+  margin-left: auto;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.personnage-stats span {
+  background: var(--bg-input);
+  padding: 0.25rem 0.5rem;
+  border-radius: 4px;
+}

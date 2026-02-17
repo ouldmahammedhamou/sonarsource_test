@@ -1,0 +1,26 @@
+<div class="list-page">
+  <h2 class="page-title">Liste des personnages</h2>
+
+  @if (loading) {
+    <p class="message">Chargement…</p>
+  } @else if (error) {
+    <p class="message error">{{ error }}</p>
+  } @else if (personnages.length === 0) {
+    <p class="message">Aucun personnage. <a routerLink="/create">Créer le premier</a>.</p>
+  } @else {
+    <ul class="personnage-list">
+      @for (p of personnages; track p.id) {
+        <li class="personnage-card">
+          <a [routerLink]="['/perso', p.id]" class="personnage-name">{{ p.nom }}</a>
+          <span class="personnage-race">{{ p.race }}</span>
+          <div class="personnage-stats">
+            <span>INT {{ p.stats.INT }}</span>
+            <span>STR {{ p.stats.STR }}</span>
+            <span>DEX {{ p.stats.DEX }}</span>
+            <span>WILL {{ p.stats.WILL }}</span>
+          </div>
+        </li>
+      }
+    </ul>
+  }
+</div>

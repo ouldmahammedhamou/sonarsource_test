@@ -1,0 +1,93 @@
+.detail-page {
+  max-width: 640px;
+  margin: 0 auto;
+}
+
+.back-link {
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.back-link:hover {
+  color: var(--accent);
+}
+
+.message {
+  color: var(--text-muted);
+}
+
+.message.error {
+  color: var(--error);
+}
+
+.personnage-detail {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.detail-header {
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detail-name {
+  font-family: var(--font-title);
+  font-size: 2rem;
+  color: var(--accent);
+  margin: 0 0 0.25rem 0;
+}
+
+.detail-race {
+  color: var(--text-muted);
+  font-size: 1.1rem;
+}
+
+.detail-stats h3,
+.detail-background h3 {
+  font-family: var(--font-title);
+  font-size: 1rem;
+  color: var(--text-muted);
+  margin: 0 0 0.75rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+}
+
+.stat-item {
+  background: var(--bg-input);
+  border-radius: 8px;
+  padding: 0.75rem;
+  text-align: center;
+}
+
+.stat-label {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  margin-bottom: 0.25rem;
+}
+
+.stat-value {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+.detail-background {
+  margin-top: 1.5rem;
+}
+
+.background-text {
+  margin: 0;
+  white-space: pre-wrap;
+  line-height: 1.6;
+  color: var(--text);
+}
