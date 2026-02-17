@@ -1,12 +1,12 @@
 /* Variables globales */
 :root {
-  --bg-dark: #1a1612;
-  --bg-card: #252019;
-  --bg-input: #2d2620;
-  --accent: #c9a227;
-  --accent-hover: #e0b83d;
-  --text: #e8e0d5;
-  --text-muted: #9a8f82;
+  --bg-dark: #fff9ef;
+  --bg-card: #EAD9A8;
+  --bg-input: #D7D2CB;
+  --accent: #43464b;
+  --accent-hover: #948359;
+  --text: #4D4A4F;
+  --text-muted: #4D4A4F;
   --border: #3d352b;
   --error: #c75c5c;
   --font-title: 'Cinzel', serif;
