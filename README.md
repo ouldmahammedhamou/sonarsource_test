@@ -21,7 +21,9 @@ Le front devrait être servi sur http://localhost:4200/
 
 ## Accès à la base de données
 url: http://localhost:8080/h2-console/login.jsp
+
 Jdbc url: jdbc:h2:file:{pathfile}/data/personnagedb;AUTO_SERVER=TRUE
+
 username: sa
 
 ## Potentiel problème
