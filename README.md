@@ -16,3 +16,5 @@ cd .\frontend\
 npm install
 ng serve
 ```
+
+Le front devrait être servi sur http://localhost:4200/
